@@ -8,7 +8,7 @@ services:
       - "443:443"
     environment:
       - ADMIN_USER=transform
-      - ADMIN_PASSWORD=transform123!
+      - ADMIN_PASSWORD=Transform123!
       - ADMIN_EMAIL=admin@example.com
       - ADMIN_PERMISSIONS=b
       - ADMIN_FULLNAME=transform
