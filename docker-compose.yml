@@ -1,17 +1,17 @@
 version: '2'
 services:
   site:
-    image: evns/grav
+    image: evnsgrav1
     restart: always
     ports:
       - "80:80"
       - "443:443"
     environment:
-      - ADMIN_USER=admin
-      - ADMIN_PASSWORD=Pa55word
+      - ADMIN_USER=transform
+      - ADMIN_PASSWORD=transform123!
       - ADMIN_EMAIL=admin@example.com
       - ADMIN_PERMISSIONS=b
-      - ADMIN_FULLNAME=Admin
+      - ADMIN_FULLNAME=transform
       - ADMIN_TITLE=SiteAdmin
       - DOMAIN=example.com    # set to your root/apex domain
       - GENERATE_CERTS=false  # set to true to automatically setup trusted ssl with let's encrypt
