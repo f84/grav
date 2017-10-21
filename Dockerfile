@@ -21,6 +21,8 @@ RUN wget https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-ad
     cd grav-admin && \
     bin/gpm install -f -y admin
 
+RUN sudo apt-get install -y git
+
 # Return to root user
 USER root
 
