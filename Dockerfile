@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y sudo wget vim unzip php5 php5-curl php5-gd php-pclzip php5-fpm
 ADD https://github.com/krallin/tini/releases/download/v0.13.2/tini /usr/local/bin/tini
 RUN chmod +x /usr/local/bin/tini
-
+RUN sudo apt-get install -y git
 # Set user to www-data
 RUN mkdir -p /var/www && chown www-data:www-data /var/www
 USER www-data
@@ -21,7 +21,7 @@ RUN wget https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-ad
     cd grav-admin && \
     bin/gpm install -f -y admin
 
-RUN sudo apt-get install -y git
+
 
 # Return to root user
 USER root
